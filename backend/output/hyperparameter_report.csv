@@ -1,0 +1,4 @@
+Number of Trees,Training Time (seconds),Accuracy,F1 Score
+50,0.7328,0.9812,0.9811
+100,1.4749,0.9874,0.9874
+200,3.4437,0.9874,0.9874
