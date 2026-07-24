@@ -1,0 +1,10 @@
+AI ENGINE BENCHMARK REPORT
+============================================================
+
+Average Inference Time : 264.59 ms
+Minimum Inference Time : 171.74 ms
+Maximum Inference Time : 582.64 ms
+Estimated FPS          : 3.78
+
+Last Prediction
+PredictionResult(predicted_label='Unknown Gesture', confidence=0.425, inference_time_ms=198.27399996574968, model_version='RandomForest_v1', success=True, message='Prediction Successful', probabilities={'0': 0.425, '1': 0.025, '2': 0.025, '3': 0.0, '4': 0.045, '5': 0.0, '6': 0.005, '7': 0.0, '8': 0.03, '9': 0.0, '10': 0.0, '11': 0.14, '12': 0.01, '13': 0.125, '14': 0.025, '15': 0.0, '16': 0.005, '17': 0.1, '18': 0.025, '19': 0.01, '20': 0.0, '21': 0.0, '22': 0.005, '23': 0.0})
