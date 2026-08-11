@@ -1,55 +1,43 @@
 class FeaturePreprocessor:
     """
-    Performs feature validation and normalization.
+    Performs feature validation and preprocessing.
     """
 
     def validate_landmarks(self, landmarks):
         """
-        Checks whether exactly 21 landmarks are present.
+        Validate that exactly 21 landmarks are present.
         """
 
         if landmarks is None:
             return False
 
-        if len(landmarks) != 21:
-            return False
-
-        return True
+        return len(landmarks) == 21
 
     def normalize(self, landmarks):
         """
-        Wrist-relative normalization.
-        Landmark 0 (wrist) becomes the origin.
+        DO NOT normalize the landmarks.
+
+        Your training dataset was created with:
+            NORMALIZE = False
+
+        So the live prediction must use the raw MediaPipe
+        landmark coordinates exactly as they are.
         """
 
-        wrist = landmarks[0]
-
-        normalized = []
-
-        for point in landmarks:
-
-            normalized.append({
-                "x": point["x"] - wrist["x"],
-                "y": point["y"] - wrist["y"],
-                "z": point["z"] - wrist["z"]
-            })
-
-        return normalized
+        return landmarks
 
     def create_feature_vector(self, landmarks):
         """
-        Converts normalized landmarks into
-        a 63-dimensional feature vector.
+        Convert 21 landmarks into a 63-dimensional feature vector.
         """
 
         features = []
 
         for point in landmarks:
-
             features.extend([
-                point["x"],
-                point["y"],
-                point["z"]
+                float(point["x"]),
+                float(point["y"]),
+                float(point["z"])
             ])
 
         return features
