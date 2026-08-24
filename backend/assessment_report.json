@@ -1,0 +1,11 @@
+{
+    "total_attempts": 105,
+    "correct_attempts": 2,
+    "incorrect_attempts": 103,
+    "overall_accuracy": 1.9,
+    "average_confidence": 0.51,
+    "average_response_time": 0.8177,
+    "strongest_alphabet": "A",
+    "weakest_alphabet": "B",
+    "most_mistaken": "B"
+}
